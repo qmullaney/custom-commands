@@ -1,0 +1,4 @@
+read file
+convert to array
+puts
+close
