@@ -19,12 +19,18 @@ function google() {
 }
 
 # small beginnings
-
-list=("A" "B")
-function addToList() {
-  list=("C")
+smallbeginnings() {
+  ruby ~/custom-commands/repeating_checklist.rb restart
 }
 
-function listIt() {
-  echo $list
+check() {
+  ruby ~/custom-commands/repeating_checklist.rb remove $1
+}
+
+function checklist() {
+  ruby ~/custom-commands/repeating_checklist.rb display
+}
+
+function add() {
+  ruby ~/custom-commands/repeating_checklist.rb add $1 $2
 }

@@ -1,4 +1,7 @@
-read file
+-&-grapes
+-&-read file
+fruit
 convert to array
+fruit
 puts
 close
