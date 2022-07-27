@@ -34,3 +34,8 @@ function checklist() {
 function add() {
   ruby ~/custom-commands/repeating_checklist.rb add $1 $2
 }
+
+le() {
+  open -a  /Applications/League\ of\ Legends.app/Contents/LoL/LeagueClient.app
+  echo 'Opening League...'
+}
