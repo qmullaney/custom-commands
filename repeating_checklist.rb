@@ -25,15 +25,28 @@ class Checklist
     def self.remove(index)
         index = index.to_i - 1
         lines = IO.readlines(@@path).map(&:chomp)
-        lines[index] = "-&-" + lines[index]
+
+        iterator = 0
+
+        lines.each_with_index do |line, i|
+            if line.index("-&-") != 0
+                if iterator == index
+                    lines[i] = "-&-" + lines[i]
+                    break
+                else
+                    iterator += 1
+                end
+            end
+        end
+            
         File.write(@@path, lines.join("\n"), mode: "w")
     end
 
     def self.restart
         lines = IO.readlines(@@path).map(&:chomp)
-        lines.each do |line|
+        lines.each_with_index do |line, i|
             if line.index("-&-") == 0
-                line = line[3..-1]
+                lines[i] = lines[i][3..-1]
             end
         end
         File.write(@@path, lines.join("\n"), mode: "w")

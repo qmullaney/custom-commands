@@ -1,7 +1,13 @@
--&-grapes
--&-read file
-fruit
-convert to array
-fruit
-puts
-close
+stretch
+fill water
+learn word
+fantano website
+news
+smooothie
+caffeine
+email/jobs
+league
+meditate
+consume art
+build world
+read
