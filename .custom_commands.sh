@@ -3,7 +3,7 @@
 # opens movie site
 function movie() {
     echo 'Opening movie site...'
-    open https://www1.ummagurau.com
+    open https://www1.attacker.tv
 }
 
 # searches google
